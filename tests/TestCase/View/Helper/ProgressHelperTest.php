@@ -8,7 +8,8 @@ use Cake\View\View;
 class ProgressHelperTest extends TestCase
 {
     /**
-     * name: @setUp
+     * @name setUp
+     * @return void Return nothing
      */
     public function setUp()
     {
@@ -17,6 +18,10 @@ class ProgressHelperTest extends TestCase
         $this->Progress = new ProgressHelper($View);
     }
 
+    /**
+     * @name testBar
+     * @return void Return nothing
+     */
     public function testBar()
     {
         $result = $this->Progress->bar(90);

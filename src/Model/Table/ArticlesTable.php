@@ -9,7 +9,9 @@ use Cake\Validation\Validator;
 class ArticlesTable extends Table
 {
     /**
-     * name @initialize
+     * @name  initialize
+     * @param array $config
+     * @return void return nothing
      */
     public function initialize(array $config)
     {
@@ -17,7 +19,9 @@ class ArticlesTable extends Table
     }
     
     /**
-     * name @validationDefault
+     * @name validationDefault
+     * @param Validator $config
+     * @return Validator return Validator
      */
     public function validationDefault(Validator $validator)
     {
@@ -28,7 +32,10 @@ class ArticlesTable extends Table
     }
     
     /**
-     * name @findPublished
+     * @name findPublished
+     * @param Query $config
+     * @param array $options
+     * @return Query return executed query
      */
     public function findPublished(Query $query, array $options)
     {
