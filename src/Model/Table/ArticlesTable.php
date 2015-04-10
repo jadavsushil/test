@@ -10,7 +10,7 @@ class ArticlesTable extends Table
 {
     /**
      * @name  initialize
-     * @param array $config configuration array     
+     * @param array $config configuration array
      */
     public function initialize(array $config)
     {
@@ -19,7 +19,7 @@ class ArticlesTable extends Table
     
     /**
      * @name validationDefault
-     * @param Validator $config validator
+     * @param Validator $validator validator
      * @return Validator return Validator
      */
     public function validationDefault(Validator $validator)
@@ -32,7 +32,7 @@ class ArticlesTable extends Table
     
     /**
      * @name findPublished
-     * @param Query $config query
+     * @param Query $query query
      * @param array $options options
      * @return Query return executed query
      */

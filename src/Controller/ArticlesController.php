@@ -8,6 +8,7 @@ class ArticlesController extends AppController
 {
     /**
      * @name indexedit
+     * @return array not return anything
      */
     public function index()
     {
@@ -18,6 +19,7 @@ class ArticlesController extends AppController
     /**
      * @name view
      * @param int $id Article id
+     * @return null not return anything
      */
     public function view($id = null)
     {
@@ -40,12 +42,12 @@ class ArticlesController extends AppController
             }
             $this->Flash->error(__('Unable to save article.'));
         }
-        $this->set('article',$article);
+        $this->set('article', $article);
     }
 
     /**
      * @name edit
-     * @param integer $id Article id
+     * @param int $id Article id
      * @return void Return nothing
      */
     public function edit($id = null)
