@@ -11,10 +11,12 @@ class ArticlesTable extends Table
     /**
      * @name  initialize
      * @param array $config configuration array
+     * @return bool not return true
      */
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
+        return true;
     }
     
     /**

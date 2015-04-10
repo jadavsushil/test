@@ -8,23 +8,25 @@ class ArticlesController extends AppController
 {
     /**
      * @name indexedit
-     * @return array not return anything
+     * @return bool not return true
      */
     public function index()
     {
         $articles = $this->Articles->find('all');
         $this->set(compact('articles'));
+        return true;
     }
 
     /**
      * @name view
      * @param int $id Article id
-     * @return null not return anything
+     * @return bool not return true
      */
     public function view($id = null)
     {
         $article = $this->Articles->get($id);
         $this->set(compact('article'));
+        return true;
     }
 
     /**
