@@ -46,4 +46,5 @@ class ArticlesFixture extends TestFixture
               'modified' => '2007-03-18 10:45:31'
           ]
       ];
- }
+}
+ 

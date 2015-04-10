@@ -6,21 +6,30 @@ use Cake\ORM\Query;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
-class ArticlesTable extends Table {
-    
-    public function initialize(array $config) {
-        
+class ArticlesTable extends Table
+{
+    /*
+     * name @initialize
+     */ 
+    public function initialize(array $config)
+    {        
         $this->addBehavior('Timestamp');
     }
     
-    public function validationDefault(Validator $validator) {
-        
+    /*
+     * name @validationDefault
+     */
+    public function validationDefault(Validator $validator)
+    {    
         $validator
                 ->notEmpty('title')
                 ->notEmpty('body');
         return $validator;
     }
     
+    /*
+     * name @findPublished
+     */
     public function findPublished(Query $query, array $options)
     {
         $query->where([

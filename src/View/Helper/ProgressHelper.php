@@ -5,6 +5,9 @@ use Cake\View\Helper;
 
 class ProgressHelper extends Helper
 {
+    /*
+     * name: @bar
+     */
     public function bar($value)
     {
         $width = round($value / 100, 2) * 100;
