@@ -8,7 +8,6 @@ class ArticlesController extends AppController
 {
     /**
      * @name indexedit
-     * @return void Return nothing
      */
     public function index()
     {
@@ -18,8 +17,7 @@ class ArticlesController extends AppController
 
     /**
      * @name view
-     * @param integer $id Article id
-     * @return void Return nothing
+     * @param int $id Article id
      */
     public function view($id = null)
     {
@@ -34,9 +32,9 @@ class ArticlesController extends AppController
     public function add()
     {
         $article = $this->Articles->newEntity();
-        if($this->request->is('post')) {
+        if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->data);
-            if($this->Articles->save($article)) {
+            if ($this->Articles->save($article)) {
                 $this->Flash->success(__('Your article has been saved'));
                 return $this->redirect(array('action' => 'index'));
             }
@@ -53,7 +51,7 @@ class ArticlesController extends AppController
     public function edit($id = null)
     {
         $article = $this->Articles->get($id);
-        if($this->request->is('post', 'put')) {
+        if ($this->request->is('post', 'put')) {
             $this->Articles->patchEntity($article, $this->request->data);
             if ($this->Articles->save($article)) {
                 $this->Flash->success(__('Your article has been saved'));
@@ -66,7 +64,7 @@ class ArticlesController extends AppController
 
     /**
      * @name delete
-     * @param integer $id Article id
+     * @param int $id Article id
      * @return void Return nothing
      */
     public function delete($id = null)

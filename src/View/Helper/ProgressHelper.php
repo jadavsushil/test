@@ -5,8 +5,10 @@ use Cake\View\Helper;
 
 class ProgressHelper extends Helper
 {
-    /*
-     * name: @bar
+    /**
+     * @name bar
+     * @param int $value value of process bar
+     * @return String string of HTML
      */
     public function bar($value)
     {
