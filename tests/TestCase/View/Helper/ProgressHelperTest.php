@@ -7,6 +7,9 @@ use Cake\View\View;
 
 class ProgressHelperTest extends TestCase
 {
+    /**
+     * name: @setUp
+     */
     public function setUp()
     {
         parent::setUp();

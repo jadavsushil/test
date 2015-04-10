@@ -47,4 +47,3 @@ class ArticlesFixture extends TestFixture
           ]
       ];
 }
- 
